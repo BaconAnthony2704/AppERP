@@ -6,8 +6,8 @@ namespace ConsolidaApp.Models
 {
     public class PasswordRecoveryModel
     {
-        public string Email { get; set; }
-        public string Client_id { get; set; }
-        public string Connection { get; set; }
+        public string email { get; set; }
+        public string client_id { get; set; }
+        public string connection { get; set; }
     }
 }

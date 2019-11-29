@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace ConsolidaApp
@@ -26,42 +27,43 @@ namespace ConsolidaApp
             IsPresented = false;
         }*/
 
-        private async void ChangePassword_Tapped(object sender, EventArgs e)
+        private void ChangePassword_Tapped(object sender, EventArgs e)
         {
             
-                await Navigation.PushAsync(new ChangePasswordPage());
+                Navigation.PushAsync(new ChangePasswordPage());
                 IsPresented = false;
             
             
         }
 
-        private async void Seguimiento_Tapped(object sender, EventArgs e)
+        private  void Seguimiento_Tapped(object sender, EventArgs e)
         {
             
-                await Navigation.PushAsync(new SeguimientoPage());
-                IsPresented = false;
-            
-                
-            
-        }
-
-        private async void Reportes_Tapped(object sender, EventArgs e)
-        {
-            
-                await Navigation.PushAsync(new ReportesPage());
+                Navigation.PushAsync(new SeguimientoPage());
                 IsPresented = false;
             
                 
+            
+        }
+
+        private void Reportes_Tapped(object sender, EventArgs e)
+        {
+            
+                Navigation.PushAsync(new ReportesPage());
+                IsPresented = false;
+            
+                
         }
 
 
-        async void Salir_Tapped(object sender, EventArgs e)
+        private void Salir_Tapped(object sender, EventArgs e)
         {
 
-            Navigation.InsertPageBefore(new LoginPage(), this);
-            await Navigation.PopAsync();
-            IsPresented = false;
-            
+            Preferences.Set("useremail", string.Empty);
+            Preferences.Set("password", string.Empty);
+            Preferences.Set("accesstoken", string.Empty);
+            Application.Current.MainPage = new NavigationPage(new LoginPage());
+
         }
 
         private void Page_Inicio_Tapped(object sender, EventArgs e)

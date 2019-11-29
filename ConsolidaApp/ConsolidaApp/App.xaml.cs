@@ -1,5 +1,6 @@
 using ConsolidaApp.Pages;
 using System;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,9 +13,17 @@ namespace ConsolidaApp
         public App()
         {
             InitializeComponent();
+            if (!string.IsNullOrEmpty(Preferences.Get("accesstoken", "")))
+            {
+                MainPage = new MainPage();
+            }
+            else if(string.IsNullOrEmpty(Preferences.Get("useremail","")) && string.IsNullOrEmpty(Preferences.Get("password","")))
+            {
+                MainPage = new NavigationPage(new LoginPage());
+            }
             //MainPage = new NavigationPage(new LoginPage());
 
-            MainPage = new NavigationPage(new LoginPage());
+           
 
         }
 

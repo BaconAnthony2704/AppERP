@@ -6,10 +6,10 @@ namespace ConsolidaApp.Models
 {
     public class RegisterModel
     {
-        public string Client_Id { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public string Connection { get; set; }
+        public string client_id { get; set; }
+        public string email { get; set; }
+        public string password { get; set; }
+        public string connection { get; set; }
 
     }
 }

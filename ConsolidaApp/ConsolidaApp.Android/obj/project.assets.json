@@ -2039,7 +2039,7 @@
           "Syncfusion.Xamarin.SfComboBox": "17.3.0.28",
           "Syncfusion.Xamarin.SfListView": "17.3.0.28",
           "Syncfusion.Xamarin.SfRating": "17.3.0.28",
-          "Xamarin.Essentials": "1.1.0",
+          "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.0.0.425677"
         },
         "compile": {
@@ -6338,5 +6338,17 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Xamarin.Essentials de 1.3.1 a 1.1.0. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n ConsolidaApp.Android -> ConsolidaApp -> Xamarin.Essentials (>= 1.3.1) \r\n ConsolidaApp.Android -> Xamarin.Essentials (>= 1.1.0)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "MonoAndroid,Version=v9.0"
+      ]
+    }
+  ]
 }

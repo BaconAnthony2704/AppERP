@@ -1514,3 +1514,4 @@ K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\andro
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\android\src\md58f1c2caf372facbb4cf1f2143a32b920\SfComboBox.java
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\android\src\md58f1c2caf372facbb4cf1f2143a32b920\TokenViewGroup.java
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\android\src\md58f1c2caf372facbb4cf1f2143a32b920\ViewHolder.java
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\res\drawable\ic_forgot_password.png

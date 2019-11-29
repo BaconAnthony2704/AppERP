@@ -2239,7 +2239,7 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Xamarin.Essentials/1.1.0": {
+      "Xamarin.Essentials/1.3.1": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -7685,10 +7685,10 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "Xamarin.Essentials/1.1.0": {
-      "sha512": "W0XOt1dNMAE2POcsVotoKDDy5FdAOnR0qULKl6WI4kQEMxQ1sp84DsSU5iacV7oQUMuPhUBAm/3ywks0HO1QrQ==",
+    "Xamarin.Essentials/1.3.1": {
+      "sha512": "+51728AdZ/qtABGvcIaNXgEoL2jAtxAXLHS8PvGCP0pb6n7twBqYpfgkmwHYVgu+U99szgtL+Jot8L+OXorPcA==",
       "type": "package",
-      "path": "xamarin.essentials/1.1.0",
+      "path": "xamarin.essentials/1.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7708,7 +7708,6 @@
         "lib/monoandroid81/Xamarin.Essentials.pdb",
         "lib/monoandroid81/Xamarin.Essentials.xml",
         "lib/monoandroid90/Xamarin.Essentials.dll",
-        "lib/monoandroid90/Xamarin.Essentials.dll.mdb",
         "lib/monoandroid90/Xamarin.Essentials.pdb",
         "lib/monoandroid90/Xamarin.Essentials.xml",
         "lib/netstandard1.0/Xamarin.Essentials.dll",
@@ -7717,6 +7716,9 @@
         "lib/netstandard2.0/Xamarin.Essentials.dll",
         "lib/netstandard2.0/Xamarin.Essentials.pdb",
         "lib/netstandard2.0/Xamarin.Essentials.xml",
+        "lib/tizen40/Xamarin.Essentials.dll",
+        "lib/tizen40/Xamarin.Essentials.pdb",
+        "lib/tizen40/Xamarin.Essentials.xml",
         "lib/uap10.0.16299/Xamarin.Essentials.dll",
         "lib/uap10.0.16299/Xamarin.Essentials.pdb",
         "lib/uap10.0.16299/Xamarin.Essentials.pri",
@@ -7724,8 +7726,14 @@
         "lib/xamarinios10/Xamarin.Essentials.dll",
         "lib/xamarinios10/Xamarin.Essentials.pdb",
         "lib/xamarinios10/Xamarin.Essentials.xml",
+        "lib/xamarintvos10/Xamarin.Essentials.dll",
+        "lib/xamarintvos10/Xamarin.Essentials.pdb",
+        "lib/xamarintvos10/Xamarin.Essentials.xml",
+        "lib/xamarinwatchos10/Xamarin.Essentials.dll",
+        "lib/xamarinwatchos10/Xamarin.Essentials.pdb",
+        "lib/xamarinwatchos10/Xamarin.Essentials.xml",
         "readme.txt",
-        "xamarin.essentials.1.1.0.nupkg.sha512",
+        "xamarin.essentials.1.3.1.nupkg.sha512",
         "xamarin.essentials.nuspec"
       ]
     },
@@ -7989,7 +7997,7 @@
       "Syncfusion.Xamarin.SfComboBox >= 17.3.0.28",
       "Syncfusion.Xamarin.SfListView >= 17.3.0.28",
       "Syncfusion.Xamarin.SfRating >= 17.3.0.28",
-      "Xamarin.Essentials >= 1.1.0",
+      "Xamarin.Essentials >= 1.3.1",
       "Xamarin.Forms >= 4.0.0.425677"
     ]
   },
@@ -8089,7 +8097,7 @@
           },
           "Xamarin.Essentials": {
             "target": "Package",
-            "version": "[1.1.0, )"
+            "version": "[1.3.1, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
