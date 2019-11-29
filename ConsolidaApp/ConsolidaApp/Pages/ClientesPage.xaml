@@ -7,48 +7,53 @@
              x:Class="ConsolidaApp.Pages.ClientesPage">
 
     <StackLayout>
-        <StackLayout>
-            
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Entry Grid.Row="0" Grid.Column="0" Placeholder="Ingrese el campo de busqueda"/>
+            <ImageButton Source="ic_busqueda.png" Grid.Row="0" Grid.Column="1"/>
+        </Grid>
         <ScrollView>
-            <StackLayout>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="Place....."/>
-                <Entry Placeholder="last one....."/>
-            </StackLayout>
+            <ListView x:Name="LvClientes" SeparatorVisibility="None" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="33"/>
+                                    <RowDefinition Height="33"/>
+                                    <RowDefinition Height="33"/>
+                                    <RowDefinition Height="33"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="80"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label  Grid.Column="0" Grid.Row="0" Text="{Binding Codigo}"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Nombre}"/>
+                                <Label Grid.Row="0" Grid.Column="2" Text="{Binding Celular}"/>
+                                <Label Grid.Row="1" Grid.Column="0" Text="{Binding Telefono}"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Email}"/>
+                                <Label Grid.Row="1" Grid.Column="2" Text="{Binding Contacto}"/>
+                                <Label Grid.Row="2" Grid.Column="0" Text="{Binding Registro}"/>
+                                <Label Grid.Row="2" Grid.Column="1" Text="{Binding Limitecredito}"/>
+                                <Label Grid.Row="2" Grid.Column="2" Text="{Binding Direccion}"/>
+                                <Label Grid.Row="3" Grid.Column="0" Text="{Binding Notas}"/>
+                                <Label Grid.Row="3" Grid.Column="1" Text="{Binding TipoCliente}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </ScrollView>
     </StackLayout>
 

@@ -18,7 +18,7 @@ namespace ConsolidaApp
         public MainPage()
         {
                 InitializeComponent();
-                NavigationPage.SetHasNavigationBar(this, false);
+                //NavigationPage.SetHasNavigationBar(this, false);
         }
 
         /*private async void Login_Tapped(object sender, EventArgs e)
@@ -29,27 +29,28 @@ namespace ConsolidaApp
 
         private void ChangePassword_Tapped(object sender, EventArgs e)
         {
-            
-                Navigation.PushAsync(new ChangePasswordPage());
-                IsPresented = false;
+
+            Detail = new NavigationPage(new ForgotPasswordPage());
+            //NavigationPage.SetHasNavigationBar(this, true);
+            IsPresented = false;
             
             
         }
 
-        private  void Seguimiento_Tapped(object sender, EventArgs e)
+        private  async void Seguimiento_Tapped(object sender, EventArgs e)
         {
             
-                Navigation.PushAsync(new SeguimientoPage());
+                await Navigation.PushAsync(new SeguimientoPage());
                 IsPresented = false;
             
                 
             
         }
 
-        private void Reportes_Tapped(object sender, EventArgs e)
+        private async void Reportes_Tapped(object sender, EventArgs e)
         {
             
-                Navigation.PushAsync(new ReportesPage());
+                await Navigation.PushAsync(new ReportesPage());
                 IsPresented = false;
             
                 

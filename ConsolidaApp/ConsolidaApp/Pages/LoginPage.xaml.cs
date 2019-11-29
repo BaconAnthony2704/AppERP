@@ -33,6 +33,7 @@ namespace ConsolidaApp.Pages
                 Preferences.Set("useremail",EntEmail.Text);
                 Preferences.Set("password", EntPassword.Text);
                 Preferences.Set("accesstoken", response.access_token);
+                //await Navigation.PushAsync(new MainPage());
                 Application.Current.MainPage = new MainPage();
                 //await DisplayAlert("Encontro", response.token_type, "Ok");
             }
