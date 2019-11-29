@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="Syncfusion.Expander.XForms.UWP" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<ResourceMapSubtree name="Syncfusion.Expander.XForms.UWP">
+				<NamedResource name="Syncfusion.Expander.XForms.UWP.xr.xml" uri="ms-resource://Syncfusion.Expander.XForms.UWP/Files/Syncfusion.Expander.XForms.UWP/Syncfusion.Expander.XForms.UWP.xr.xml">
+					<Candidate type="Path">
+						<Value>Syncfusion.Expander.XForms.UWP\Syncfusion.Expander.XForms.UWP.xr.xml</Value>
+					</Candidate>
+				</NamedResource>
+				<ResourceMapSubtree name="Accordion">
+					<NamedResource name="Accordion.xbf" uri="ms-resource://Syncfusion.Expander.XForms.UWP/Files/Syncfusion.Expander.XForms.UWP/Accordion/Accordion.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Expander">
+					<NamedResource name="Expander.xbf" uri="ms-resource://Syncfusion.Expander.XForms.UWP/Files/Syncfusion.Expander.XForms.UWP/Expander/Expander.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="LayoutTransformControl">
+					<NamedResource name="LayoutTransformControl.xbf" uri="ms-resource://Syncfusion.Expander.XForms.UWP/Files/Syncfusion.Expander.XForms.UWP/LayoutTransformControl/LayoutTransformControl.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Themes">
+					<NamedResource name="Generic.xbf" uri="ms-resource://Syncfusion.Expander.XForms.UWP/Files/Syncfusion.Expander.XForms.UWP/Themes/Generic.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

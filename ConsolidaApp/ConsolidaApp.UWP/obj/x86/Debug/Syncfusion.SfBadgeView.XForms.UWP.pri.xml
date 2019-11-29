@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="Syncfusion.SfBadgeView.XForms.UWP" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<ResourceMapSubtree name="Syncfusion.SfBadgeView.XForms.UWP">
+				<ResourceMapSubtree name="Assets">
+					<ResourceMapSubtree name="Fonts">
+						<NamedResource name="BadgeIcons.ttf" uri="ms-resource://Syncfusion.SfBadgeView.XForms.UWP/Files/Syncfusion.SfBadgeView.XForms.UWP/Assets/Fonts/BadgeIcons.ttf">
+							<Candidate type="Path">
+								<Value>Syncfusion.SfBadgeView.XForms.UWP\Assets\Fonts\BadgeIcons.ttf</Value>
+							</Candidate>
+						</NamedResource>
+					</ResourceMapSubtree>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

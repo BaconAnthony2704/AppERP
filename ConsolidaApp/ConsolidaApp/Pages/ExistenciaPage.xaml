@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ConsolidaApp.Pages.ExistenciaPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="1"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!--Boton de obtener producto y ver factura-->
+            <Button Text="Producto" BackgroundColor="Green" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <Button Text="Ver factura" BackgroundColor="White" TextColor="Black" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2"/>
+            <!--Campos de busqueda de producto-->
+            <Label Text="Nombre" FontSize="Medium" TextColor="White" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="Ingrese el nombre" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2"/>
+
+            <Label Text="Monto factura" FontSize="Medium" TextColor="White" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="Ingrese el monto a facturar" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"/>
+
+            <Label Text="Credito disponible" FontSize="Medium" TextColor="White" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="Credito disponible" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2"/>
+
+            <Label Text="Bodega" FontSize="Medium" TextColor="White" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="[Bodega]" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2"/>
+            <!--Campo de busqueda-->
+            <Label Text="Buscar" FontSize="Medium" TextColor="White" Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="Ingresar la busqueda" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" HorizontalTextAlignment="Start"/>
+            <ImageButton Source="search.png" Grid.Row="5" Grid.Column="3"/>
+            <!--Separador-->
+            <BoxView BackgroundColor="White" WidthRequest="50" HeightRequest="1" Grid.Row="6" Grid.ColumnSpan="4"/>
+            
+            <!--Campo de resultado por producto-->
+            <Label Text="Producto" FontSize="Medium" TextColor="White" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="[Producto]" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2"/>
+
+            <Label Text="Precio" FontSize="Medium" TextColor="White" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="[Precio]" Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="2"/>
+
+            <Label Text="Existencia" FontSize="Medium" TextColor="White" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="[Existencia]" Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="2"/>
+
+            <Label Text="Vencimiento" FontSize="Medium" TextColor="White" Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="[Vencimiento]" Grid.Row="10" Grid.Column="2" Grid.ColumnSpan="2"/>
+            <!--Separador-->
+            <BoxView BackgroundColor="White" WidthRequest="50" HeightRequest="1" Grid.Row="11" Grid.ColumnSpan="4"/>
+             
+             <!--Campo de resultado por producto-->
+            <Label Text="Producto" FontSize="Medium" TextColor="White" Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="[Producto]" Grid.Row="12" Grid.Column="2" Grid.ColumnSpan="2"/>
+
+            <Label Text="Precio" FontSize="Medium" TextColor="White" Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="[Precio]" Grid.Row="13" Grid.Column="2" Grid.ColumnSpan="2"/>
+
+            <Label Text="Existencia" FontSize="Medium" TextColor="White" Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="[Existencia]" Grid.Row="14" Grid.Column="2" Grid.ColumnSpan="2"/>
+
+            <Label Text="Vencimiento" FontSize="Medium" TextColor="White" Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="[Vencimiento]" Grid.Row="15" Grid.Column="2" Grid.ColumnSpan="2"/>
+            <!--Separador-->
+            <BoxView BackgroundColor="White" WidthRequest="50" HeightRequest="1" Grid.Row="16" Grid.ColumnSpan="4"/>
+
+        </Grid>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
