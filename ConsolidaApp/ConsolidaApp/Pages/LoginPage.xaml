@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              x:Class="ConsolidaApp.Pages.LoginPage">
     <ContentPage.Content>
+        
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -17,14 +18,16 @@
                 <Label Text="Iniciar Sesión" FontSize="Default"/>
             </StackLayout>
             <StackLayout Grid.Row="1" Padding="15,15,15,15">
-                <Entry Placeholder="Email" x:Name="EntEmail" Text="consolida16@gmail.com"/>
-                <Entry Placeholder="Contraseña" x:Name="EntPassword" IsPassword="True" Text="C034541020abc"/>
+                <Entry Placeholder="Email" x:Name="EntEmail"/>
+                <Entry Placeholder="Contraseña" x:Name="EntPassword" IsPassword="True"/>
                 <Label Text="Olvidó su contraseña?" HorizontalOptions="End">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer x:Name="TapForgotPassword" Tapped="TapForgotPassword_Tapped"/>
                     </Label.GestureRecognizers>
                 </Label>
                 <Button Text="Iniciar Sesión" x:Name="InicioSesion" Clicked="InicioSesion_Clicked" CornerRadius="30" HeightRequest="40"/>
+                <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center"
+                               Color="White" x:Name="BusyIndicator"/>
             </StackLayout>
             <StackLayout Grid.Row="2" HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Padding="0,20,0,20">
                 <Label Text="Aún no se ha registrado?"/>
@@ -33,7 +36,9 @@
                         <TapGestureRecognizer x:Name="Registrarme" Tapped="Registrarme_Tapped"/>
                     </Label.GestureRecognizers>
                 </Label>
+                
             </StackLayout>
         </Grid>
+        
     </ContentPage.Content>
 </ContentPage>

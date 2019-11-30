@@ -17,8 +17,10 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <Entry Grid.Row="0" Grid.Column="0" Placeholder="Ingrese el campo de busqueda"/>
-            <ImageButton Source="ic_busqueda.png" Grid.Row="0" Grid.Column="1"/>
+            <Entry Grid.Row="0" Grid.Column="0" Placeholder="Ingrese el campo de busqueda" x:Name="EntSearch"/>
+            <ImageButton Source="ic_busqueda.png" Grid.Row="0" Grid.Column="1" CornerRadius="40" x:Name="BtnBuscar" Clicked="BtnBuscar_Clicked"/>
+            <ActivityIndicator Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center"
+                               Color="White" x:Name="BusyIndicator"/>
         </Grid>
         <ScrollView>
             <ListView x:Name="LvClientes" SeparatorVisibility="None" HasUnevenRows="True">
@@ -31,30 +33,40 @@
                                     <RowDefinition Height="33"/>
                                     <RowDefinition Height="33"/>
                                     <RowDefinition Height="33"/>
+                                    <RowDefinition Height="33"/>
+                                    <RowDefinition Height="1"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="80"/>
                                     <ColumnDefinition Width="80"/>
                                     <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="80"/>
                                 </Grid.ColumnDefinitions>
-
-                                <Label  Grid.Column="0" Grid.Row="0" Text="{Binding Codigo}"/>
-                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Nombre}"/>
-                                <Label Grid.Row="0" Grid.Column="2" Text="{Binding Celular}"/>
-                                <Label Grid.Row="1" Grid.Column="0" Text="{Binding Telefono}"/>
-                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Email}"/>
-                                <Label Grid.Row="1" Grid.Column="2" Text="{Binding Contacto}"/>
-                                <Label Grid.Row="2" Grid.Column="0" Text="{Binding Registro}"/>
-                                <Label Grid.Row="2" Grid.Column="1" Text="{Binding Limitecredito}"/>
-                                <Label Grid.Row="2" Grid.Column="2" Text="{Binding Direccion}"/>
-                                <Label Grid.Row="3" Grid.Column="0" Text="{Binding Notas}"/>
-                                <Label Grid.Row="3" Grid.Column="1" Text="{Binding TipoCliente}"/>
+                                <Label Grid.Row="0" Grid.Column="0" Text="Codigo:"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Codigo}"/>
+                                <Label Grid.Row="0" Grid.Column="2" Text="Nombre:"/>
+                                <Label Grid.Row="0" Grid.Column="3" Text="{Binding Nombre}"/>
+                                <Label Grid.Row="1" Grid.Column="0" Text="Celular:"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Celular}"/>
+                                <Label Grid.Row="1" Grid.Column="2" Text="Codigo:"/>
+                                <Label Grid.Row="1" Grid.Column="3" Text="{Binding Telefono}"/>
+                                <Label Grid.Row="2" Grid.Column="0" Text="Registro:"/>
+                                <Label Grid.Row="2" Grid.Column="1" Text="{Binding Registro}"/>
+                                <Label Grid.Row="2" Grid.Column="2" Text="Limite de credito"/>
+                                <Label Grid.Row="2" Grid.Column="3" Text="{Binding Limitecredito}"/>
+                                <Label Grid.Row="3" Grid.Column="0" Text="Direccion"/>
+                                <Label Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Direccion}"/>
+                                <Label Grid.Row="4" Grid.Column="0" Text="Tipo de cliente"/>
+                                <Label Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding TipoCliente}"/>
+                                <BoxView BackgroundColor="White" WidthRequest="80" HeightRequest="1" Grid.Row="5" Grid.ColumnSpan="4"/>
                             </Grid>
+
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
         </ScrollView>
+        
     </StackLayout>
 
 

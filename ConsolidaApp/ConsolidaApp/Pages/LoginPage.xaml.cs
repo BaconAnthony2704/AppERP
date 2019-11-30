@@ -17,25 +17,28 @@ namespace ConsolidaApp.Pages
         public LoginPage()
         {
             InitializeComponent();
+            
         }
 
         public async void InicioSesion_Clicked(object sender, EventArgs e)
         {
+            BusyIndicator.IsRunning = true;
             ApiService apiService = new ApiService();
             var response= await apiService.GetToken(EntEmail.Text, EntPassword.Text);
             if (string.IsNullOrEmpty(response.access_token))
             {
+                BusyIndicator.IsRunning = false;
                 await DisplayAlert("Error","No tiene acceso a esta cuenta","Ok");
-
             }
             else
             {
+               
                 Preferences.Set("useremail",EntEmail.Text);
                 Preferences.Set("password", EntPassword.Text);
                 Preferences.Set("accesstoken", response.access_token);
-                //await Navigation.PushAsync(new MainPage());
                 Application.Current.MainPage = new MainPage();
-                //await DisplayAlert("Encontro", response.token_type, "Ok");
+                BusyIndicator.IsRunning = false;   
+                
             }
 
         }
