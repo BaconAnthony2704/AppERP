@@ -271,3 +271,9 @@ K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.iOS\obj\iPhone\Debug\XamlC
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.iOS\obj\iPhone\Debug\ConsolidaApp.iOS.csproj.CopyComplete
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.iOS\obj\iPhone\Debug\ConsolidaApp.iOS.exe
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.iOS\obj\iPhone\Debug\ConsolidaApp.iOS.pdb
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.iOS\bin\iPhone\Debug\Microcharts.dll
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.iOS\bin\iPhone\Debug\Microcharts.iOS.dll
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.iOS\bin\iPhone\Debug\Microcharts.Forms.dll
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.iOS\bin\iPhone\Debug\SkiaSharp.dll
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.iOS\bin\iPhone\Debug\SkiaSharp.Views.iOS.dll
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.iOS\bin\iPhone\Debug\SkiaSharp.Views.Forms.dll

@@ -23,7 +23,7 @@
                                Color="White" x:Name="BusyIndicator"/>
         </Grid>
         <ScrollView>
-            <ListView x:Name="LvClientes" SeparatorVisibility="None" HasUnevenRows="True">
+            <ListView x:Name="LvClientes" ItemSelected="LvClientes_ItemSelected" SeparatorVisibility="None" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -44,12 +44,14 @@
                                 </Grid.ColumnDefinitions>
                                 <Label Grid.Row="0" Grid.Column="0" Text="Codigo:"/>
                                 <Label Grid.Row="0" Grid.Column="1" Text="{Binding Codigo}"/>
-                                <Label Grid.Row="0" Grid.Column="2" Text="Nombre:"/>
-                                <Label Grid.Row="0" Grid.Column="3" Text="{Binding Nombre}"/>
+                                <Label Grid.Row="0" Grid.Column="2" Text="Telefono:"/>
+                                <Label Grid.Row="0" Grid.Column="3" Text="{Binding Telefono}"/>
+                                <!--
                                 <Label Grid.Row="1" Grid.Column="0" Text="Celular:"/>
-                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Celular}"/>
-                                <Label Grid.Row="1" Grid.Column="2" Text="Codigo:"/>
-                                <Label Grid.Row="1" Grid.Column="3" Text="{Binding Telefono}"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Celular}"/>-->
+                                <Label Grid.Row="1" Grid.Column="0" Text="Nombre:"/>
+                                <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Nombre}"/>
+                                
                                 <Label Grid.Row="2" Grid.Column="0" Text="Registro:"/>
                                 <Label Grid.Row="2" Grid.Column="1" Text="{Binding Registro}"/>
                                 <Label Grid.Row="2" Grid.Column="2" Text="Limite de credito"/>

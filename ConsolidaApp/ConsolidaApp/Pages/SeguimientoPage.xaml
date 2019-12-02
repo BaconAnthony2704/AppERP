@@ -9,7 +9,7 @@
         <StackLayout>
             <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" x:Name="EntNombre" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

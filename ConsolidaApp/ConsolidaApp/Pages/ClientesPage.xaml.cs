@@ -18,24 +18,13 @@ namespace ConsolidaApp.Pages
         
     {
         public ObservableCollection<ClientesViewModels> clientes;
+        private bool First=true;
        public ClientesPage()
         {
             InitializeComponent();
             clientes = new ObservableCollection<ClientesViewModels>();
             
         }
-        /*protected override async void OnAppearing()
-        {
-            base.OnAppearing();
-            ApiService apiService = new ApiService();
-            var listaClientes = await apiService.GetClientes();
-            foreach(var cli in listaClientes)
-            {
-                clientes.Add(cli);
-            }
-            LvClientes.ItemsSource = clientes;
-
-        }*/
 
         private async void BtnBuscar_Clicked(object sender, EventArgs e)
         {
@@ -51,16 +40,21 @@ namespace ConsolidaApp.Pages
                 }
                 else
                 {
-                    BusyIndicator.IsRunning = true;
-                    clientes.Clear();
-                    ApiService apiService = new ApiService();
-                    var listaCliente = await apiService.GetClientes(valor);
-                    foreach (var cli in listaCliente)
+                    if (First)
                     {
-                        clientes.Add(cli);
+                        BusyIndicator.IsRunning = true;
+                        clientes.Clear();
+                        ApiService apiService = new ApiService();
+                        var listaCliente = await apiService.GetClientes(valor);
+                        foreach (var cli in listaCliente)
+                        {
+                            clientes.Add(cli);
+                        }
+                        LvClientes.ItemsSource = clientes;
+                        BusyIndicator.IsRunning = false;
                     }
-                    LvClientes.ItemsSource = clientes;
-                    BusyIndicator.IsRunning = false;
+                    First = false;
+                    
                 }
             }catch(NullReferenceException)
             {
@@ -73,6 +67,19 @@ namespace ConsolidaApp.Pages
             }
             
 
+        }
+
+        private void LvClientes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var selectedCliente = e.SelectedItem as ClientesViewModels;
+            //var codigo = e.SelectedItemIndex as ClientesViewModels;
+
+            if (selectedCliente!= null)
+            {
+               ExistenciaPage existencia = new ExistenciaPage(selectedCliente.Codigo);
+
+            }
+            
         }
     }
 }

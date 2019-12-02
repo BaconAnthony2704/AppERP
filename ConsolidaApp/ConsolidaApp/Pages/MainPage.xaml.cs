@@ -18,7 +18,7 @@ namespace ConsolidaApp
         public MainPage()
         {
                 InitializeComponent();
-                //NavigationPage.SetHasNavigationBar(this, false);
+                NavigationPage.SetHasNavigationBar(this, false);
         }
 
         /*private async void Login_Tapped(object sender, EventArgs e)
@@ -30,30 +30,37 @@ namespace ConsolidaApp
         private void ChangePassword_Tapped(object sender, EventArgs e)
         {
 
-            Detail = new NavigationPage(new ForgotPasswordPage());
+            //Detail = new NavigationPage(new ForgotPasswordPage());
             //NavigationPage.SetHasNavigationBar(this, true);
+            Navigation.PushAsync(new ForgotPasswordPage());
             IsPresented = false;
             
             
         }
 
-        private  async void Seguimiento_Tapped(object sender, EventArgs e)
+        private void Seguimiento_Tapped(object sender, EventArgs e)
         {
-            
-                await Navigation.PushAsync(new SeguimientoPage());
-                IsPresented = false;
+
+
+
+
+
+
+            //Detail = new NavigationPage(new SeguimientoPage());
+            Navigation.PushAsync(new SeguimientoPage());
+            IsPresented = false;
             
                 
             
         }
 
-        private async void Reportes_Tapped(object sender, EventArgs e)
+        private void Reportes_Tapped(object sender, EventArgs e)
         {
-            
-                await Navigation.PushAsync(new ReportesPage());
-                IsPresented = false;
-            
-                
+
+            //Detail = new NavigationPage(new ReportesPage());
+            Navigation.PushAsync(new ReportesPage());
+            IsPresented = false;
+ 
         }
 
 
@@ -64,7 +71,6 @@ namespace ConsolidaApp
             Preferences.Set("password", string.Empty);
             Preferences.Set("accesstoken", string.Empty);
             Application.Current.MainPage = new NavigationPage(new LoginPage());
-
         }
 
         private void Page_Inicio_Tapped(object sender, EventArgs e)

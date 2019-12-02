@@ -9,6 +9,7 @@ namespace Web2.ViewModels
 {
     public class ClientesViewModels
     {
+        
         [Key]
         [Column("clientes")]
         [StringLength(25)]

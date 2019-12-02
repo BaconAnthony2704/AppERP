@@ -42,6 +42,6 @@ K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp\obj\Debug\netstandard2.0\C
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp\obj\Debug\netstandard2.0\ConsolidaApp.dll
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp\obj\Debug\netstandard2.0\ref\ConsolidaApp.dll
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp\obj\Debug\netstandard2.0\ConsolidaApp.pdb
-K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp\obj\Debug\netstandard2.0\XamlC.stamp
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp\obj\Debug\netstandard2.0\Pages\RegistrarmePage.xaml.g.cs
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp\obj\Debug\netstandard2.0\Pages\ForgotPasswordPage.xaml.g.cs
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp\obj\Debug\netstandard2.0\XamlC.stamp

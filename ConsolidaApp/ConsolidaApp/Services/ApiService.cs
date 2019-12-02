@@ -74,5 +74,15 @@ namespace ConsolidaApp.Services
             var response = await httpClient.GetStringAsync("https://consolidaerp.azurewebsites.net/api/Clientes/Listar/" + value);
             return JsonConvert.DeserializeObject<List<ClientesViewModels>>(response);
         }
+
+        public async Task<List<ClientesViewModels>> GetTipoCliente()
+        {
+            var httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Preferences.Get("accesstoken", ""));
+            var response = await httpClient.GetStringAsync("https://consolidaerp.azurewebsites.net/api/Clientes/Listar/a");
+
+            return JsonConvert.DeserializeObject<List<ClientesViewModels>>(response);
+        }
+        
     }
 }

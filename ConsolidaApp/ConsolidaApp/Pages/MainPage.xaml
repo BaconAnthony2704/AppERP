@@ -21,14 +21,7 @@
                     </StackLayout.GestureRecognizers>
                     
                 </StackLayout>
-                <!--
-                <StackLayout Orientation="Horizontal" Margin="20,20,0,0" Spacing="20">
-                    <Image Source="ic_avatar.png"/>
-                    <Label Text="Login" VerticalOptions="Center" FontSize="Large" TextColor="#101c42"/>
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer x:Name="Login" Tapped="Login_Tapped"/>
-                    </StackLayout.GestureRecognizers>
-                </StackLayout>-->
+                
                 <StackLayout Orientation="Horizontal" Margin="20,20,0,0" Spacing="20">
                     <Image Source="ic_settings.png"/>
                     <Label Text="Cambiar Password" VerticalOptions="Center" FontSize="Large" TextColor="#101c42"/>

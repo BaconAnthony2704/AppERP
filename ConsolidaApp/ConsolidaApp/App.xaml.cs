@@ -15,11 +15,11 @@ namespace ConsolidaApp
             InitializeComponent();
             if (!string.IsNullOrEmpty(Preferences.Get("accesstoken", "")))
             {
-                MainPage = new MainPage();
+                MainPage = new NavigationPage(new MainPage());
             }
             else if(string.IsNullOrEmpty(Preferences.Get("useremail","")) && string.IsNullOrEmpty(Preferences.Get("password","")))
             {
-                MainPage = new NavigationPage(new LoginPage());
+                MainPage = new LoginPage();
             }
             //MainPage = new NavigationPage(new LoginPage());
 

@@ -806,3 +806,12 @@ K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.UWP\obj\x86\Debug\Xamarin.
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.UWP\obj\x86\Debug\ProjectArchitectures.txt
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_636160931180000000.json
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_636160967180000000.json
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.UWP\bin\x86\Debug\Microcharts.Uwp.dll
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.UWP\bin\x86\Debug\Microcharts.dll
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.UWP\bin\x86\Debug\Microcharts.Forms.dll
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.UWP\bin\x86\Debug\libEGL.dll
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.UWP\bin\x86\Debug\libGLESv2.dll
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.UWP\bin\x86\Debug\libSkiaSharp.dll
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.UWP\bin\x86\Debug\SkiaSharp.dll
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.UWP\bin\x86\Debug\SkiaSharp.Views.UWP.dll
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.UWP\bin\x86\Debug\SkiaSharp.Views.Forms.dll
