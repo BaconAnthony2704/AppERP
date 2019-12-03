@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Web2.ViewModels;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,7 +19,7 @@ namespace ConsolidaApp.Pages
         
     {
         public ObservableCollection<ClientesViewModels> clientes;
-        private bool First=true;
+        
        public ClientesPage()
         {
             InitializeComponent();
@@ -37,24 +38,20 @@ namespace ConsolidaApp.Pages
                     await DisplayAlert("Falta parametros", "Debe ingresar un valor de busqueda", "Salir");
                     clientes.Clear();
                     BusyIndicator.IsRunning = false;
+                    
                 }
                 else
                 {
-                    if (First)
+                    BusyIndicator.IsRunning = true;
+                    clientes.Clear();
+                    ApiService apiService = new ApiService();
+                    var listaCliente = await apiService.GetClientes(valor);
+                    foreach (var cli in listaCliente)
                     {
-                        BusyIndicator.IsRunning = true;
-                        clientes.Clear();
-                        ApiService apiService = new ApiService();
-                        var listaCliente = await apiService.GetClientes(valor);
-                        foreach (var cli in listaCliente)
-                        {
-                            clientes.Add(cli);
-                        }
-                        LvClientes.ItemsSource = clientes;
-                        BusyIndicator.IsRunning = false;
+                        clientes.Add(cli);
                     }
-                    First = false;
-                    
+                    LvClientes.ItemsSource = clientes;
+                    BusyIndicator.IsRunning = false;
                 }
             }catch(NullReferenceException)
             {
@@ -72,14 +69,15 @@ namespace ConsolidaApp.Pages
         private void LvClientes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var selectedCliente = e.SelectedItem as ClientesViewModels;
-            //var codigo = e.SelectedItemIndex as ClientesViewModels;
 
-            if (selectedCliente!= null)
+            if (selectedCliente != null)
             {
-               ExistenciaPage existencia = new ExistenciaPage(selectedCliente.Codigo);
-
+                Preferences.Set("codigo", selectedCliente.Codigo);
+                
             }
-            
+
         }
+
+       
     }
 }

@@ -7,20 +7,53 @@
              x:Class="ConsolidaApp.Pages.ExistenciaPage">
 
     <StackLayout>
-        <ListView x:Name="idCliente" SeparatorVisibility="None" HasUnevenRows="True">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout>
-                            <Label Text="{Binding Codigo}"/>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        <Label Text="Prueba"/>
+        
+        <ScrollView>
+            <ListView x:Name="LvExist" SeparatorVisibility="None" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="33"/>
+                                    <RowDefinition Height="33"/>
+                                    <RowDefinition Height="33"/>
+                                    <RowDefinition Height="33"/>
+                                    <RowDefinition Height="33"/>
+                                    <RowDefinition Height="1"/>
+                                    <RowDefinition Height="33"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="80"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <Label Grid.Row="0" Grid.Column="0" Text="Codigo:"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Codigo}"/>
+                                <Label Grid.Row="0" Grid.Column="2" Text="Telefono:"/>
+                                <Label Grid.Row="0" Grid.Column="3" Text="{Binding Telefono}"/>
+                                <Label Grid.Row="1" Grid.Column="0" Text="Nombre:"/>
+                                <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Nombre}"/>
 
+                                <Label Grid.Row="2" Grid.Column="0" Text="Registro:"/>
+                                <Label Grid.Row="2" Grid.Column="1" Text="{Binding Registro}"/>
+                                <Label Grid.Row="2" Grid.Column="2" Text="Limite de credito"/>
+                                <Label Grid.Row="2" Grid.Column="3" Text="{Binding Limitecredito}"/>
+                                <Label Grid.Row="3" Grid.Column="0" Text="Direccion"/>
+                                <Label Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Direccion}"/>
+                                <Label Grid.Row="4" Grid.Column="0" Text="Tipo de cliente"/>
+                                <Label Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding TipoCliente}"/>
+                                <BoxView BackgroundColor="White" WidthRequest="80" HeightRequest="1" Grid.Row="5" Grid.ColumnSpan="4"/>
+                                
+                            </Grid>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
     </StackLayout>
 
-    
 </ContentPage>

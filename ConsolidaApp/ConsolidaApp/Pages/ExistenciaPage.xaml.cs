@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Web2.ViewModels;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,30 +16,37 @@ namespace ConsolidaApp.Pages
     public partial class ExistenciaPage : ContentPage
 
     {
-        public ObservableCollection<ClientesViewModels> clientes;
+        ObservableCollection<ClientesViewModels> clientes;
+
         public ExistenciaPage()
         {
             InitializeComponent();
-            
-        }
-        public ExistenciaPage(string id)
-        {
-            InitializeComponent();
             clientes = new ObservableCollection<ClientesViewModels>();
-            GetClienteProfile(id);
+
         }
         
-        
-        public async void GetClienteProfile(string id)
+        protected async override void OnAppearing()
         {
-            ApiService apiService = new ApiService();
-            var listaCliente = await apiService.GetClientes(id);
-            foreach (var cli in listaCliente)
-            {
-                clientes.Add(cli);
-                idCliente.ItemsSource = clientes;
-            }
+            clientes.Clear();
+            base.OnAppearing();
+            var codigo=Preferences.Get("codigo", "");
             
+            ApiService apiService = new ApiService();
+            if (codigo != null)
+            {
+                var cliente = await apiService.GetClientes(codigo);
+                foreach (var cli in cliente)
+                {
+                    clientes.Add(cli);
+                }
+                LvExist.ItemsSource = clientes;
+
+            }
+            else
+            {
+                await DisplayAlert("status", "Seleccione el cliente", "salir");
+            }
+
         }
 
     }

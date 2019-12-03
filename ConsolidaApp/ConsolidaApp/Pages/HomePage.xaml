@@ -13,5 +13,6 @@
     <pages:ExistenciaPage Title="Inventario" IconImageSource="ic_pantalla.png"></pages:ExistenciaPage>
     <pages:PedidoPage Title="Pedido" IconImageSource="ic_cotizar.png"></pages:PedidoPage>
 
+   
 </TabbedPage>
  

@@ -9,6 +9,7 @@ using Xamarin.Forms.Xaml;
 
 namespace ConsolidaApp.Pages
 {
+    
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage : TabbedPage
     {
@@ -16,5 +17,7 @@ namespace ConsolidaApp.Pages
         {
             InitializeComponent();
         }
+        
+
     }
 }
