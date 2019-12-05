@@ -1,4 +1,5 @@
-﻿using ConsolidaApp.Services;
+﻿using ConsolidaApp.Models;
+using ConsolidaApp.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace ConsolidaApp.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ForgotPasswordPage : ContentPage
     {
+        Validaciones validaciones = new Validaciones();
         public ForgotPasswordPage()
         {
             InitializeComponent();
@@ -20,17 +22,32 @@ namespace ConsolidaApp.Pages
 
         private async void BtnEnviar_Clicked(object sender, EventArgs e)
         {
-            ApiService apiService = new ApiService();
-            bool response=await apiService.PasswordRecovery(EntEmail.Text.Trim());
-            if (!response)
+            try
             {
-                await DisplayAlert("Oops", "A ocurrido un error, intente de nuevo", "Cancel");
+                ApiService apiService = new ApiService();
+                if (validaciones.verificarCorreo(EntEmail.Text.Trim()))
+                {
+                    bool response = await apiService.PasswordRecovery(EntEmail.Text.Trim());
+                    if (!response)
+                    {
+                        await DisplayAlert("Advertencia", "No se podido verificar, intente de nuevo", "Cancelar");
 
+                    }
+                    else
+                    {
+                        await DisplayAlert("Exito", "Se le ha enviado un correo a: " + EntEmail.Text, "Aceptar");
+                        await Navigation.PopToRootAsync();
+                    }
+                }
+                else
+                {
+                    await DisplayAlert("Advertencia", "Debe ser correo electrinico", "Aceptar");
+                    EntEmail.Text = "";
+                }
             }
-            else
+            catch (NullReferenceException)
             {
-                await DisplayAlert("Exito", "Se le ha enviado un correo a: "+EntEmail.Text, "OK");
-                await Navigation.PopToRootAsync();
+                await DisplayAlert("Advertencia", "Debe ingresar un correo electronico", "Entendido");
             }
         }
     }

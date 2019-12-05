@@ -22,6 +22,7 @@
                                     <RowDefinition Height="33"/>
                                     <RowDefinition Height="1"/>
                                     <RowDefinition Height="33"/>
+                                    <RowDefinition Height="33"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="80"/>
@@ -46,7 +47,8 @@
                                 <Label Grid.Row="4" Grid.Column="0" Text="Tipo de cliente"/>
                                 <Label Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding TipoCliente}"/>
                                 <BoxView BackgroundColor="White" WidthRequest="80" HeightRequest="1" Grid.Row="5" Grid.ColumnSpan="4"/>
-                                
+                                <ImageButton Source="ic_call.png" x:Name="LlamarCliente" Clicked="LlamarCliente_Clicked" Grid.Row="6" Grid.Column="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                <ImageButton Source="ic_email.png" x:Name="EmailCliente" Clicked="EmailCliente_Clicked" Grid.Row="6" Grid.Column="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
                             </Grid>
 
                         </ViewCell>

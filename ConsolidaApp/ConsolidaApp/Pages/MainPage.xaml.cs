@@ -7,18 +7,20 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace ConsolidaApp
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
-    [DesignTimeVisible(false)]
+    //[DesignTimeVisible(false)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : MasterDetailPage
     {
         public MainPage()
         {
                 InitializeComponent();
-                NavigationPage.SetHasNavigationBar(this, false);
+                //NavigationPage.SetHasNavigationBar(this, false);
         }
 
         /*private async void Login_Tapped(object sender, EventArgs e)
@@ -30,9 +32,10 @@ namespace ConsolidaApp
         private void ChangePassword_Tapped(object sender, EventArgs e)
         {
 
-            //Detail = new NavigationPage(new ForgotPasswordPage());
-            //NavigationPage.SetHasNavigationBar(this, true);
-            Navigation.PushAsync(new ForgotPasswordPage());
+            Detail = new NavigationPage(new ForgotPasswordPage());
+
+            //Navigation.PushAsync(new ForgotPasswordPage());
+            
             IsPresented = false;
             
             
@@ -41,24 +44,17 @@ namespace ConsolidaApp
         private void Seguimiento_Tapped(object sender, EventArgs e)
         {
 
-
-
-
-
-
-            //Detail = new NavigationPage(new SeguimientoPage());
-            Navigation.PushAsync(new SeguimientoPage());
+            Detail = new NavigationPage(new SeguimientoPage());
+           //Navigation.PushAsync(new SeguimientoPage());
             IsPresented = false;
-            
-                
-            
+ 
         }
 
         private void Reportes_Tapped(object sender, EventArgs e)
         {
 
-            //Detail = new NavigationPage(new ReportesPage());
-            Navigation.PushAsync(new ReportesPage());
+            Detail = new NavigationPage(new ReportesPage());
+            //Navigation.PushAsync(new ReportesPage());
             IsPresented = false;
  
         }
@@ -75,9 +71,8 @@ namespace ConsolidaApp
 
         private void Page_Inicio_Tapped(object sender, EventArgs e)
         {
-            
-                IsPresented = false;
-           
+            Detail = new NavigationPage(new HomePage());
+            IsPresented = false;
         }
     }
 }

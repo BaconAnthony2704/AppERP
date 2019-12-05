@@ -18,7 +18,7 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <Entry Grid.Row="0" Grid.Column="0" Placeholder="Ingrese el campo de busqueda" x:Name="EntSearch"/>
-            <ImageButton Source="ic_busqueda.png" Grid.Row="0" Grid.Column="1" CornerRadius="40" x:Name="BtnBuscar" Clicked="BtnBuscar_Clicked"/>
+            <ImageButton Source="ic_search.png" Grid.Row="0" Grid.Column="1" CornerRadius="40" x:Name="BtnBuscar" Clicked="BtnBuscar_Clicked"/>
             <ActivityIndicator Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center"
                                Color="White" x:Name="BusyIndicator"/>
         </Grid>
@@ -61,6 +61,7 @@
                                 <Label Grid.Row="4" Grid.Column="0" Text="Tipo de cliente"/>
                                 <Label Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding TipoCliente}"/>
                                 <BoxView BackgroundColor="White" WidthRequest="80" HeightRequest="1" Grid.Row="5" Grid.ColumnSpan="4"/>
+                                
                             </Grid>
 
                         </ViewCell>

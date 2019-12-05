@@ -73,11 +73,23 @@ namespace ConsolidaApp.Pages
             if (selectedCliente != null)
             {
                 Preferences.Set("codigo", selectedCliente.Codigo);
-                
+                var homepage = new HomePage();
+                ChangeScreen(1);
             }
 
         }
+        public void ChangeScreen(int page)
+        {
+            /*Se crea una variable que hara referencia a un TabbedPage
+                 luego a la pagina actual, se activa la pagina No.2*/
+            var masterpage = this.Parent as TabbedPage;
+            masterpage.CurrentPage = masterpage.Children[page]; //Accede a pagina 2
+            masterpage.CurrentPage.Focus();
+        }
 
-       
+        private void LlamarCliente_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1362,7 +1362,6 @@ K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\stamp
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\res\drawable\search.png
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\res\drawable-hdpi\search.png
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\res\drawable-xhdpi\search.png
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\res\drawable-xxhdpi\search.png
@@ -1542,3 +1541,18 @@ K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\andro
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\android\src\md5e4c2749da5edf4a9690b7fedcbdb53f0\SKCanvasViewRendererBase_2.java
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\android\src\md5e4c2749da5edf4a9690b7fedcbdb53f0\SKGLViewRenderer.java
 K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\android\src\md5e4c2749da5edf4a9690b7fedcbdb53f0\SKGLViewRendererBase_2.java
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\res\drawable\ic_call.png
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\res\drawable-hdpi\ic_call.png
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\res\drawable-xhdpi\ic_call.png
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\res\drawable-xxhdpi\ic_call.png
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\res\drawable-xxxhdpi\ic_call.png
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\res\drawable\ic_email.png
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\res\drawable-hdpi\ic_email.png
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\res\drawable-xhdpi\ic_email.png
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\res\drawable-xxhdpi\ic_email.png
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\res\drawable-xxxhdpi\ic_email.png
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\res\drawable\ic_search.png
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\res\drawable-hdpi\ic_search.png
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\res\drawable-xhdpi\ic_search.png
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\res\drawable-xxhdpi\ic_search.png
+K:\_aplicacion\ConsolidaApp\ConsolidaApp\ConsolidaApp.Android\obj\Debug\90\res\drawable-xxxhdpi\ic_search.png

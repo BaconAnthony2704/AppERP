@@ -10,7 +10,7 @@
     <MasterDetailPage.Master>
         <ContentPage Title="Consolida ERP" BackgroundColor="LightGray">
             <StackLayout>
-                <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center" Color="White" x:Name="BusyIndicator"/>
+                
                 <StackLayout>
                     <Grid>
                         <BoxView BackgroundColor="#101c42" HeightRequest="150"/>

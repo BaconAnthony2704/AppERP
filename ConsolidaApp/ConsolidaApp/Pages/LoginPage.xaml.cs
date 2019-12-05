@@ -13,33 +13,64 @@ namespace ConsolidaApp.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
+        
     {
+        Validaciones validaciones = new Validaciones();
         public LoginPage()
         {
+            
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             
         }
 
         public async void InicioSesion_Clicked(object sender, EventArgs e)
         {
-            BusyIndicator.IsRunning = true;
-            ApiService apiService = new ApiService();
-            var response= await apiService.GetToken(EntEmail.Text, EntPassword.Text);
-            if (string.IsNullOrEmpty(response.access_token))
+            try
             {
+                BusyIndicator.IsRunning = true;
+                ApiService apiService = new ApiService();
+
+                if (!validaciones.verificarCampo(EntEmail.Text.Trim()))
+                {
+                    await DisplayAlert("Advertencia", "Debe agregar un correo electronico", "Entendido");
+                    BusyIndicator.IsRunning = false;
+                }
+                else if (!validaciones.verificarCampo(EntPassword.Text.Trim()))
+                {
+                    await DisplayAlert("Advertencia", "Debe agregar una contraseña", "Entendido");
+                    BusyIndicator.IsRunning = false;
+                }
+                if (validaciones.verificarCorreo(EntEmail.Text.Trim()))
+                {
+                    var response = await apiService.GetToken(EntEmail.Text.Trim(), EntPassword.Text.Trim());
+                    if (string.IsNullOrEmpty(response.access_token))
+                    {
+                        BusyIndicator.IsRunning = false;
+                        await DisplayAlert("Advertencia", "No tiene acceso a esta cuenta", "Entendido");
+                    }
+                    else
+                    {
+                        BusyIndicator.IsRunning = false;
+                        Preferences.Set("useremail", EntEmail.Text.Trim());
+                        Preferences.Set("password", EntPassword.Text.Trim());
+                        Preferences.Set("accesstoken", response.access_token);
+                        Application.Current.MainPage = new MainPage();
+
+                    }
+
+                }
+                else
+                {
+                    await DisplayAlert("Advertencia", "Debe ser un correo electronico", "Entendido");
+                }
+            }
+            catch (NullReferenceException)
+            {
+                await DisplayAlert("Advertencia", "Debe agregar un correo electronico", "Entendido");
                 BusyIndicator.IsRunning = false;
-                await DisplayAlert("Error","No tiene acceso a esta cuenta","Ok");
             }
-            else
-            {
-               
-                Preferences.Set("useremail",EntEmail.Text);
-                Preferences.Set("password", EntPassword.Text);
-                Preferences.Set("accesstoken", response.access_token);
-                Application.Current.MainPage = new MainPage();
-                BusyIndicator.IsRunning = false;   
-                
-            }
+
 
         }
 
